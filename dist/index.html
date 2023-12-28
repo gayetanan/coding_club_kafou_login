@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script>
+    (function () {
+      const currentUser = localStorage.getItem("currentUser");
+      if (!currentUser) {
+        window.location.href = "/login/"
+      }
+      localStorage.setItem("users", JSON.stringify([
+        { username: "appo", email: "appo@email.com", password: "1234" },
+      ]))
+    })();
+
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <script type="module" crossorigin src="/assets/main-_E14Bfoa.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-E7ph1U7r.css">
+</head>
+
+<body>
+  <section class="h-screen grid content-center home">
+    <div class="container">
+      <div class="content">
+        <div class="x">
+          <span>Welcome !</span>
+          <h2 class="heading-2" id="username">hello</h2>
+          <button class="button" id="log-out">Log out</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const { username } = JSON.parse(localStorage.getItem("currentUser"));
+    document.querySelector("#username").innerText = username;
+    document.querySelector("#log-out").addEventListener("click", () => {
+      localStorage.removeItem("currentUser");
+      window.location.href = "/login/"
+    })
+  </script>
+</body>
+
+</html>

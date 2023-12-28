@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            const currentUser = localStorage.getItem("currentUser");
+            if (currentUser) {
+                window.location.href = "/"
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container flex nav">
+        <a href="/">Home</a>
+        <a href="/docs/">Docs</a>
+    </div>
+    <section class="h-screen login">
+        <div class="container">
+            <div class="content">
+                <h2 class="heading heading-2">Welcome back !</h2>
+                <form action="" id="form">
+                    <div class="field">
+                        <label class="sr-only" for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Your email">
+                        <!-- <span>hello</span> -->
+                    </div>
+                    <div class="field icon">
+                        <label class="sr-only" for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="******">
+                        <i id="show" class='bx bxs-hide'></i>
+                    </div>
+                    <button disabled id="b" class="button button-primary button-full">Login</button>
+                </form>
+                <div id="message-ctn" style="text-align: center;">
+                    <!-- <span>hello</span> -->
+                </div>
+                <div class="separator">
+                    <hr>
+                    <span>Or</span>
+                </div>
+                <div class="oauth-apps">
+                    <a href="#" class="oauth-link">
+                        <img src="../assets/google.svg" alt="google auth icon">
+                        <span>Continue with Google</span>
+                    </a>
+                    <a href="#" class="oauth-link">
+                        <img src="../assets/google.svg" alt="google auth icon">
+                        <span>Continue with Facebbok</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            const currentUser = localStorage.getItem("currentUser");
+            if (currentUser) {
+                window.location.href = "/"
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+  <script type="module" crossorigin src="/assets/login-MHPT0SN5.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-_E14Bfoa.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-E7ph1U7r.css">
+</head>
+
+<body>
+    <div class="container flex nav">
+        <a href="/">Home</a>
+        <a href="/docs/">Docs</a>
+    </div>
+    <section class="h-screen login">
+        <div class="container">
+            <div class="content">
+                <h2 class="heading heading-2">Welcome back !</h2>
+                <form action="" id="form">
+                    <div class="field">
+                        <label class="sr-only" for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Your email">
+                        <!-- <span>hello</span> -->
+                    </div>
+                    <div class="field icon">
+                        <label class="sr-only" for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="******">
+                        <i id="show" class='bx bxs-hide'></i>
+                    </div>
+                    <button disabled id="b" class="button button-primary button-full">Login</button>
+                </form>
+                <div id="message-ctn" style="text-align: center;">
+                    <!-- <span>hello</span> -->
+                </div>
+                <div class="separator">
+                    <hr>
+                    <span>Or</span>
+                </div>
+                <div class="oauth-apps">
+                    <a href="#" class="oauth-link">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24'%20viewBox='0%200%2024%2024'%20width='24'%3e%3cpath%20d='M22.56%2012.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26%201.37-1.04%202.53-2.21%203.31v2.77h3.57c2.08-1.92%203.28-4.74%203.28-8.09z'%20fill='%234285F4'/%3e%3cpath%20d='M12%2023c2.97%200%205.46-.98%207.28-2.66l-3.57-2.77c-.98.66-2.23%201.06-3.71%201.06-2.86%200-5.29-1.93-6.16-4.53H2.18v2.84C3.99%2020.53%207.7%2023%2012%2023z'%20fill='%2334A853'/%3e%3cpath%20d='M5.84%2014.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43%208.55%201%2010.22%201%2012s.43%203.45%201.18%204.93l2.85-2.22.81-.62z'%20fill='%23FBBC05'/%3e%3cpath%20d='M12%205.38c1.62%200%203.06.56%204.21%201.64l3.15-3.15C17.45%202.09%2014.97%201%2012%201%207.7%201%203.99%203.47%202.18%207.07l3.66%202.84c.87-2.6%203.3-4.53%206.16-4.53z'%20fill='%23EA4335'/%3e%3cpath%20d='M1%201h22v22H1z'%20fill='none'/%3e%3c/svg%3e" alt="google auth icon">
+                        <span>Continue with Google</span>
+                    </a>
+                    <a href="#" class="oauth-link">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24'%20viewBox='0%200%2024%2024'%20width='24'%3e%3cpath%20d='M22.56%2012.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26%201.37-1.04%202.53-2.21%203.31v2.77h3.57c2.08-1.92%203.28-4.74%203.28-8.09z'%20fill='%234285F4'/%3e%3cpath%20d='M12%2023c2.97%200%205.46-.98%207.28-2.66l-3.57-2.77c-.98.66-2.23%201.06-3.71%201.06-2.86%200-5.29-1.93-6.16-4.53H2.18v2.84C3.99%2020.53%207.7%2023%2012%2023z'%20fill='%2334A853'/%3e%3cpath%20d='M5.84%2014.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43%208.55%201%2010.22%201%2012s.43%203.45%201.18%204.93l2.85-2.22.81-.62z'%20fill='%23FBBC05'/%3e%3cpath%20d='M12%205.38c1.62%200%203.06.56%204.21%201.64l3.15-3.15C17.45%202.09%2014.97%201%2012%201%207.7%201%203.99%203.47%202.18%207.07l3.66%202.84c.87-2.6%203.3-4.53%206.16-4.53z'%20fill='%23EA4335'/%3e%3cpath%20d='M1%201h22v22H1z'%20fill='none'/%3e%3c/svg%3e" alt="google auth icon">
+                        <span>Continue with Facebbok</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
